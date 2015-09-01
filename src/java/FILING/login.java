@@ -144,6 +144,7 @@ Date mydate;
                    System.out.println("entered");
                   
                     session.setAttribute("username", conn.rs.getString("Username"));
+                    session.setAttribute("level", conn.rs.getString("AllowDelete"));
                    
 
                  

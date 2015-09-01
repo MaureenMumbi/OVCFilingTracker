@@ -18,6 +18,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.nio.file.Files;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -37,7 +38,10 @@ public class updatedbpword extends HttpServlet {
  String url,dbconnpath;
  String authentication;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException {
+        
+        
+  
        if(request.getParameter("hostname")==null){
        
            host="localhost:1433";
@@ -142,9 +146,10 @@ out.close();
         response.setContentType("text/html;charset=UTF-8");
         
         
+   
+          
         
-        
-response.sendRedirect("selectParameters.jsp");
+response.sendRedirect("index.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -158,7 +163,11 @@ response.sendRedirect("selectParameters.jsp");
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       try {
+           processRequest(request, response);
+       } catch (SQLException ex) {
+           Logger.getLogger(updatedbpword.class.getName()).log(Level.SEVERE, null, ex);
+       }
     }
 
     /** 
@@ -171,7 +180,11 @@ response.sendRedirect("selectParameters.jsp");
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       try {
+           processRequest(request, response);
+       } catch (SQLException ex) {
+           Logger.getLogger(updatedbpword.class.getName()).log(Level.SEVERE, null, ex);
+       }
     }
 
     /** 

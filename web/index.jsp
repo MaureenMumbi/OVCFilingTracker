@@ -35,7 +35,7 @@
 	<!-- Fixed top -->
 	<div id="top">
 	<div class="fixed" style="height:60px;">
-			<a href="index.html" title="" class="logo" style="padding-top:2px;"><img src="img/logo.png" alt="" style=" height:48px; padding-top:0px;" /></a>
+			<a href="index.jsp" title="" class="logo" style="padding-top:2px;"><img src="img/logo.png" alt="" style=" height:48px; padding-top:0px;" /></a>
                         <a><img src="img/logo1.png" alt="" style=" height:48px; margin-left: 250px" /></a>
 			<ul class="top-menu">
 				<li class="dropdown">
@@ -73,28 +73,45 @@
                
 
                 <div class="login-btn"><input type="submit" value="Log me in" class="btn btn-danger btn-block" /></div>
+             
             </form>
+             
         </div>
     </div>
     <!-- /login block -->
 <%
      dbConn conn = new dbConn("1");
-     String usernames="";
-     String pwds="";
-String getPasword="select * from Users";
-conn.rs = conn.state.executeQuery(getPasword);
-while(conn.rs.next()){
-usernames= conn.rs.getString(1);
-pwds=conn.rs.getString(2);
-System.out.println(pwds);
+//     String usernames="";
+//     String pwds="";
+//String getPasword="select * from Users";
+//conn.rs = conn.state.executeQuery(getPasword);
+//while(conn.rs.next()){
+//usernames= conn.rs.getString(1);
+//pwds=conn.rs.getString(2);
+////System.out.println(pwds);
+//
+// decryptor myEncryptor= new decryptor();
+//   String stringToEncrypt=pwds;
+//        //String encrypted=pwds;
+//        String decrypted=myEncryptor.decrypt(pwds);
+////        System.out.println(decrypted +"   "+usernames);
+//
+//}
 
- decryptor myEncryptor= new decryptor();
-   String stringToEncrypt=pwds;
-        //String encrypted=pwds;
-        String decrypted=myEncryptor.decrypt(pwds);
-        System.out.println(decrypted +"   "+usernames);
 
-}
+
+              String insertuser=" insert into Users (UserName,Password,DateCreated,CreatedBy,AllowDelete)"
+              + " values('joel','trQHgAUEQsI=','2015-01-09 00:00:00.000','System','0')";  
+              
+             String checkifexists=" select * from Users where UserName='joel'";
+         conn.rs = conn.state.executeQuery(checkifexists);
+         if(conn.rs.next()){
+          System.out.println("User already added");
+         }else{
+              conn.state1.executeUpdate(insertuser);
+       
+              System.out.println(" new User  added") ;   
+         }
 %>
 
 	<!-- Footer -->

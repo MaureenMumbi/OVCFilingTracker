@@ -116,7 +116,7 @@
 	<!-- Fixed top -->
 	<div id="top">
 		<div class="fixed">
-			<!--<a href="index.html" title="" class="logo"><img src="img/logo.png" alt="" /></a>-->
+			<!--<a href="index.jsp" title="" class="logo"><img src="img/logo.png" alt="" /></a>-->
 			<ul class="top-menu">
 				<li><a class="fullview"></a></li>
 				<li><a class="showmenu"></a></li>
@@ -177,7 +177,7 @@
 
 				    <!-- Main navigation -->
 			        <ul class="navigation widget">
-			            <li><a href="index.html" title=""><i class="icon-home"></i>Dashboard</a></li>
+			            <li><a href="index.jsp" title=""><i class="icon-home"></i>Dashboard</a></li>
 			            <li><a href="#" title="" class="expand"><i class="icon-reorder"></i>Form elements<strong>3</strong></a>
 			                <ul>
 			                    <li><a href="forms.html" title="">Form components</a></li>

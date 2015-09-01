@@ -178,7 +178,7 @@ xmlhttp.send();
 <!-- Fixed top -->
 	<div id="top">
 		<div class="fixed" style="height:60px;">
-			<a href="index.html" title="" class="logo" style="padding-top:2px;"><img src="img/logo.png" alt="" style=" height:48px; padding-top:0px;" /></a>
+			<a href="index.jsp" title="" class="logo" style="padding-top:2px;"><img src="img/logo.png" alt="" style=" height:48px; padding-top:0px;" /></a>
                         <a><img src="img/logo2.png" alt="" style=" height:48px; margin-left: 250px" /></a>
 			<ul class="top-menu">
 <!--				<li><a class="fullview"></a></li>
@@ -224,7 +224,7 @@ xmlhttp.send();
 
 				    <!-- Main navigation -->
 			        <ul class="navigation widget">
-			            <%@include file="/menu.html"%>	
+			            <%@include file="/menu.jsp"%>	
 			        </ul>
 			        <!-- /main navigation -->
 
@@ -252,7 +252,7 @@ xmlhttp.send();
 			    <!-- Breadcrumbs line -->
 			    <div class="crumbs" style="margin-top: 10px;">
 		            <ul id="breadcrumbs" class="breadcrumb"> 
-<!--		                <li><a href="index.html">Dashboard</a></li>
+<!--		                <li><a href="index.jsp">Dashboard</a></li>
 		                <li><a href="forms.html">Form elements</a></li>
 		                <li class="active"><a href="forms.html" title="">Form components</a></li>-->
 		            </ul>
@@ -291,7 +291,7 @@ xmlhttp.send();
 
 
 		    	<!-- Basic inputs -->
-	            <h5 class="widget-name"><i class="icon-align-justify"></i>New Entries</h5>
+	            <h5 class="widget-name"><i class="icon-align-justify"></i>COUNTY REPORT</h5>
   <%
                             if (session.getAttribute("replytext") != null)  { %>
                                 <script type="text/javascript"> 

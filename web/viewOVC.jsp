@@ -186,7 +186,7 @@
 	<!-- Fixed top -->
 	<div id="top">
 		<div class="fixed" style="height:60px;">
-			<a href="index.html" title="" class="logo" style="padding-top:2px;"><img src="img/logo.png" alt="" style=" height:48px; padding-top:0px;" /></a>
+			<a href="index.jsp" title="" class="logo" style="padding-top:2px;"><img src="img/logo.png" alt="" style=" height:48px; padding-top:0px;" /></a>
                         <a><img src="img/logo2.png" alt="" style=" height:48px; margin-left: 250px" /></a>
 			<ul class="top-menu">
 				
@@ -225,7 +225,7 @@
 
 				    <!-- Main navigation -->
 			        <ul class="navigation widget">
-			              <%@include file="/menu.html"%>	
+			              <%@include file="/menu.jsp"%>	
 			        </ul>
 			        <!-- /main navigation -->
 
@@ -247,8 +247,8 @@
 			    <!-- Breadcrumbs line -->
 			    <div class="crumbs" style="margin-top: 10px;">
 		            <ul id="breadcrumbs" class="breadcrumb"> 
-		                <li><a href="index.html">Home</a></li>
-		                <li class="active"><a href="viewentries.jsp" title="">View Entries</a></li>
+		                <li><a href="selectParameters.jsp">Home</a></li>
+		                <li class="active"><a href="viewOVC.jsp" title="">View Entries</a></li>
 		            </ul>
 			        
 		           
